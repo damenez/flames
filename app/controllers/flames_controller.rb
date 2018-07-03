@@ -1,5 +1,5 @@
 class FlamesController < ApplicationController
-   skip_before_filter :verify_authenticity_token
+  skip_before_filter :verify_authenticity_token
 
   def index
   end
@@ -12,17 +12,11 @@ class FlamesController < ApplicationController
     names(@name1, @name2)
     future
     @rel = $z
-    # byebug
-  
   end
   
 def names(x, y)
-  # puts x
-  # puts y
   xmax = x.length - 1
-  # puts xmax
   ymax = y.length - 1
-  # puts ymax
 
   xctr = 0
   yctr = 0
@@ -41,9 +35,6 @@ def names(x, y)
     end
   end
   xctr -= 1
-  # puts "xctr = #{xctr}" 
-
-
   
   for j in 0..ymax
     for i in 0..xmax
@@ -57,9 +48,7 @@ def names(x, y)
     end
   end
   
-  # puts "yctr = #{yctr}" 
-
-  # puts "#{$totctr = xctr + yctr}" 
+  
   $totctr = xctr + yctr 
 
 
@@ -92,13 +81,5 @@ def future
   end
 
 end
-
-# puts 'Input Name1'
-# x = gets
-# puts 'Input Name2'
-# y = gets
-# names(x, y)
-
-# future
 
 end
